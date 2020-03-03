@@ -15,6 +15,12 @@
 		25F78359240C134200AFF5A4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F78357240C134200AFF5A4 /* SWRevealViewController.m */; };
 		25F7835E240C337300AFF5A4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7835D240C337300AFF5A4 /* ChatViewController.swift */; };
 		25F78360240C338000AFF5A4 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7835F240C338000AFF5A4 /* ChannelViewController.swift */; };
+		25F78363240C53C000AFF5A4 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F78361240C53C000AFF5A4 /* LoginCell.swift */; };
+		25F78364240C53C000AFF5A4 /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F78362240C53C000AFF5A4 /* LoginCell.xib */; };
+		25F78368240C564200AFF5A4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F78367240C564200AFF5A4 /* Login.storyboard */; };
+		25F7836C240C56CA00AFF5A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7836B240C56CA00AFF5A4 /* LoginViewController.swift */; };
+		25F7836E240D76AC00AFF5A4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7836D240D76AC00AFF5A4 /* SignupViewController.swift */; };
+		25F78370240D841A00AFF5A4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7836F240D841A00AFF5A4 /* GradientView.swift */; };
 		7148AA938558E3109236F944 /* Pods_Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F80C715621F1F4EDC5B92C /* Pods_Slack.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,12 @@
 		25F78358240C134200AFF5A4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		25F7835D240C337300AFF5A4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		25F7835F240C338000AFF5A4 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		25F78361240C53C000AFF5A4 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		25F78362240C53C000AFF5A4 /* LoginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCell.xib; sourceTree = "<group>"; };
+		25F78367240C564200AFF5A4 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		25F7836B240C56CA00AFF5A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		25F7836D240D76AC00AFF5A4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		25F7836F240D841A00AFF5A4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3988CB79E380F313C27A978E /* Pods-Slack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slack.debug.xcconfig"; path = "Target Support Files/Pods-Slack/Pods-Slack.debug.xcconfig"; sourceTree = "<group>"; };
 		94F80C715621F1F4EDC5B92C /* Pods_Slack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B564D25F31A68D458E37CA2B /* Pods-Slack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slack.release.xcconfig"; path = "Target Support Files/Pods-Slack/Pods-Slack.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,13 +81,11 @@
 		25F78340240BFF7200AFF5A4 /* Slack */ = {
 			isa = PBXGroup;
 			children = (
-				25F7835B240C334200AFF5A4 /* Model */,
-				25F7835C240C334800AFF5A4 /* View */,
-				25F7835A240C333700AFF5A4 /* Controller */,
+				25F78369240C565700AFF5A4 /* SlideView */,
+				25F78365240C561D00AFF5A4 /* Login */,
 				25F78355240C132400AFF5A4 /* SupportFiles */,
 				25F78341240BFF7200AFF5A4 /* AppDelegate.swift */,
 				25F78343240BFF7200AFF5A4 /* SceneDelegate.swift */,
-				25F78347240BFF7200AFF5A4 /* Main.storyboard */,
 				25F7834A240BFF7300AFF5A4 /* Assets.xcassets */,
 				25F7834C240BFF7300AFF5A4 /* LaunchScreen.storyboard */,
 				25F7834F240BFF7300AFF5A4 /* Info.plist */,
@@ -112,8 +122,48 @@
 		25F7835C240C334800AFF5A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				25F78347240BFF7200AFF5A4 /* Main.storyboard */,
+				25F78361240C53C000AFF5A4 /* LoginCell.swift */,
+				25F78362240C53C000AFF5A4 /* LoginCell.xib */,
+				25F7836F240D841A00AFF5A4 /* GradientView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		25F78365240C561D00AFF5A4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				25F78366240C562C00AFF5A4 /* View */,
+				25F7836A240C56B100AFF5A4 /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		25F78366240C562C00AFF5A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25F78367240C564200AFF5A4 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25F78369240C565700AFF5A4 /* SlideView */ = {
+			isa = PBXGroup;
+			children = (
+				25F7835B240C334200AFF5A4 /* Model */,
+				25F7835C240C334800AFF5A4 /* View */,
+				25F7835A240C333700AFF5A4 /* Controller */,
+			);
+			path = SlideView;
+			sourceTree = "<group>";
+		};
+		25F7836A240C56B100AFF5A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25F7836B240C56CA00AFF5A4 /* LoginViewController.swift */,
+				25F7836D240D76AC00AFF5A4 /* SignupViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D1EDEF75F7AE42B852798D99 /* Pods */ = {
@@ -197,6 +247,8 @@
 				25F7834E240BFF7300AFF5A4 /* LaunchScreen.storyboard in Resources */,
 				25F7834B240BFF7300AFF5A4 /* Assets.xcassets in Resources */,
 				25F78349240BFF7200AFF5A4 /* Main.storyboard in Resources */,
+				25F78368240C564200AFF5A4 /* Login.storyboard in Resources */,
+				25F78364240C53C000AFF5A4 /* LoginCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,11 +301,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F7836C240C56CA00AFF5A4 /* LoginViewController.swift in Sources */,
 				25F78342240BFF7200AFF5A4 /* AppDelegate.swift in Sources */,
+				25F7836E240D76AC00AFF5A4 /* SignupViewController.swift in Sources */,
 				25F78344240BFF7200AFF5A4 /* SceneDelegate.swift in Sources */,
 				25F7835E240C337300AFF5A4 /* ChatViewController.swift in Sources */,
 				25F78359240C134200AFF5A4 /* SWRevealViewController.m in Sources */,
 				25F78360240C338000AFF5A4 /* ChannelViewController.swift in Sources */,
+				25F78363240C53C000AFF5A4 /* LoginCell.swift in Sources */,
+				25F78370240D841A00AFF5A4 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

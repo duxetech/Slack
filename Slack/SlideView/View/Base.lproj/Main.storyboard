@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uC4-P3-CXx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -17,6 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CG0-BV-OqC"/>
                     <connections>
                         <segue destination="hCD-gx-OQ8" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="1Pu-cf-nMW"/>
                         <segue destination="ZO2-7G-AL8" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="61R-fU-zKS"/>
@@ -24,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3" y="115"/>
+            <point key="canvasLocation" x="913.04347826086962" y="114.50892857142857"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="jqH-XC-6wJ">
@@ -34,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhJ-Gm-oty">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhJ-Gm-oty" customClass="GradientView" customModule="Slack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWL-h0-zwQ">
@@ -81,13 +82,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wtg-x1-Top" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.6376811594205" y="516.96428571428567"/>
+            <point key="canvasLocation" x="2134.7826086956525" y="516.96428571428567"/>
         </scene>
         <!--Channel View Controller-->
         <scene sceneID="paX-V9-nrm">
             <objects>
                 <viewController id="hCD-gx-OQ8" customClass="ChannelViewController" customModule="Slack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wdu-gV-hdo">
+                    <view key="view" contentMode="scaleToFill" id="wdu-gV-hdo" customClass="GradientView" customModule="Slack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -136,10 +137,14 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnTapped:" destination="hCD-gx-OQ8" eventType="touchUpInside" id="bGd-bP-7Yu"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cf1-lU-sd9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cf1-lU-sd9">
                                 <rect key="frame" x="0.0" y="148" width="414" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.1762229337" green="1" blue="0.95418780599999997" alpha="0.58595544170000002" colorSpace="custom" customColorSpace="displayP3"/>
@@ -162,10 +167,41 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBa-c5-rC8"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="cf1-lU-sd9" id="y02-hH-d0b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXI-UT-ulH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173.913043478261" y="-209.59821428571428"/>
+            <point key="canvasLocation" x="2084.057971014493" y="-209.59821428571428"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="890-oe-2rC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" id="uEn-lU-TR3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5q2-7X-6kT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Iw-sc-f4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807" y="-336"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="yzh-kf-eOa">
+            <objects>
+                <navigationController title=" " automaticallyAdjustsScrollViewInsets="NO" id="uC4-P3-CXx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yYe-6R-v9C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jeq-1e-fWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AN-LZ-n7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="114.50892857142857"/>
         </scene>
     </scenes>
     <resources>

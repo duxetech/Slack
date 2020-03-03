@@ -1,24 +1,19 @@
 //
-//  ChatViewController.swift
+//  SignupViewController.swift
 //  Slack
 //
-//  Created by Karthik on 01/03/20.
+//  Created by Karthik on 02/03/20.
 //  Copyright © 2020 Karthik. All rights reserved.
 //
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class SignupViewController: UIViewController {
 
-    
-    @IBOutlet weak var menuBtn : UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Signup"
 
-        menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-      //  self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         // Do any additional setup after loading the view.
     }
     

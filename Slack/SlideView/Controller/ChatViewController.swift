@@ -1,5 +1,5 @@
 //
-//  ChannelViewController.swift
+//  ChatViewController.swift
 //  Slack
 //
 //  Created by Karthik on 01/03/20.
@@ -8,16 +8,23 @@
 
 import UIKit
 
-class ChannelViewController: UIViewController {
+class ChatViewController: UIViewController {
 
+    
+    @IBOutlet weak var menuBtn : UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 80
+        menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+      //  self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         // Do any additional setup after loading the view.
     }
     
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden=true
+    }
     /*
     // MARK: - Navigation
 
